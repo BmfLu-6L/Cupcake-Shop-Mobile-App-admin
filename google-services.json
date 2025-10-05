@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "533318951814",
+    "firebase_url": "https://cupcake-shoppe-default-rtdb.firebaseio.com",
+    "project_id": "cupcake-shoppe",
+    "storage_bucket": "cupcake-shoppe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:533318951814:android:5ed647c9aa11f607754207",
+        "android_client_info": {
+          "package_name": "com.example.thecupcakeshoppe"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhPPmc0xE--Ys6XWst9T9-Qbn8FE_yT08"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:533318951814:android:d996554e4afa943a754207",
+        "android_client_info": {
+          "package_name": "com.example.thecupcakeshoppe_admin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhPPmc0xE--Ys6XWst9T9-Qbn8FE_yT08"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

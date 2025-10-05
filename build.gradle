@@ -1,11 +1,93 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-buildscript {
+plugins {
 
-    dependencies {
-        classpath 'com.google.gms:google-services:4.3.15'
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.example.thecupcakeshoppe_admin'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.thecupcakeshoppe_admin"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
     }
 }
-plugins {
-    id 'com.android.application' version '7.3.0' apply false
-    id 'com.android.library' version '7.3.0' apply false
+
+dependencies {
+
+    implementation 'com.google.firebase:firebase-storage:20.2.0'
+    implementation 'com.google.firebase:firebase-storage-license:12.0.1'
+    implementation 'com.google.firebase:firebase-auth:21.0.2'
+    implementation 'com.google.firebase:firebase-firestore:24.0.2'
+    implementation 'com.google.firebase:firebase-functions:20.0.2'
+    implementation 'com.google.firebase:firebase-storage-ktx:20.2.0'
+    implementation 'com.google.firebase:firebase-firestore-ktx:24.6.1'
+    implementation 'com.google.firebase:firebase-functions-ktx:20.3.1'
+    constraints {
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0") {
+            because("kotlin-stdlib-jdk7 is now a part of kotlin-stdlib")
+        }
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0") {
+            because("kotlin-stdlib-jdk8 is now a part of kotlin-stdlib")
+        }
+    }
+    implementation fileTree(dir: 'libs',include:['*.jar'])
+    implementation 'com.google.firebase:firebase-analytics-ktx:21.3.0'
+    implementation 'com.google.firebase:firebase-auth-ktx:22.0.0'
+    implementation 'com.google.firebase:firebase-database-ktx:20.2.2'
+    implementation 'com.google.firebase:firebase-database:20.2.2'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+    implementation 'androidx.navigation:navigation-fragment:2.5.3'
+    implementation 'androidx.navigation:navigation-ui:2.5.3'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.2',{
+        exclude group:'cpm.android.support',module:'support-annotations'
+    })
+
+    implementation platform('com.google.firebase:firebase-bom:32.1.0')
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    //noinspection GradleCompatible
+    implementation 'com.android.support:cardview-v7:26.1.0'
+    //noinspection GradleDynamicVersion,GradleCompatible
+    implementation 'com.android.support:recyclerview-v7:26+'
+
+    implementation 'info.hoang8f:fbutton:1.0.5'
+    implementation 'com.google.firebase:firebase-core:21.1.1'
+    implementation 'com.google.firebase:firebase-database:20.2.2'
+    implementation 'com.rengwuxian.materialedittext:library:2.1.4'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:26.1.0'
+    //noispection GradleCompatible
+    implementation 'com.firebaseui:firebase-ui-database:1.2.0'
+    implementation 'com.squareup.picasso:picasso:2.3.3'
+    implementation 'com.jaredrummler:material-spinner:1.1.0'
+    //implementation 'com.github.jd-alexander:android-flat-button:v1.1'
+
+
 }
